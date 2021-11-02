@@ -482,6 +482,7 @@
 			justify-self: flex-end
 
 .services
+	margin-bottom: 80px
 
 	&__container
 		display: flex
@@ -499,6 +500,18 @@
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
 		gap: 45px
 
+		+r(1200)
+			gap: 20px
+		
+		+r(992)
+			gap: 10px
+
+		+r(767)
+			grid-template-columns: 1fr 1fr 1fr
+
+		+r(480)
+			grid-template-columns: 1fr 1fr
+
 	&__item
 		display: flex
 		align-items: flex-end
@@ -513,6 +526,17 @@
 		border-radius: 5px
 		overflow: hidden
 
+		+r(992)
+			background: #fff
+			color: $title
+			font-size: 13px
+			text-transform: none
+			border-radius: 10px
+			align-items: center
+			justify-content: center
+			height: 30px
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+
 		&::after
 			content: ''
 			position: absolute
@@ -523,9 +547,92 @@
 			left: 0
 			z-index: -1
 
+			+r(992)
+				display: none
+
 		&:hover
 			transform: scale(1.01)
 			color: #fff
+
+.exchange
+
+	&__container
+		@extend .services__container
+
+		+r(480)
+			padding: 0 50px
+
+	&__title
+		@extend .services__title
+
+	&__btn
+		@extend .services__btn
+
+	&__wrap
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		gap: 45px
+
+		+r(1440)
+			gap: 20px
+
+		+r(1200)
+			grid-template-columns: 1fr 1fr 1fr
+
+		+r(767)
+			grid-template-columns: 1fr 1fr
+
+		+r(480)
+			grid-template-columns: 1fr
+
+	&__item
+		display: flex
+		flex-direction: column
+		align-items: center
+		background: #fff
+		border-radius: 5px
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+		padding: 25px 15px 15px 15px
+
+		&_title
+			font-size: 16px
+			font-weight: 700
+			color: $title
+			margin-bottom: 15px
+
+		&_text
+			color: $text
+			margin-bottom: 30px
+			line-height: 14px
+
+		&_info
+			display: flex
+			align-items: center
+			width: 100%
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+			border-radius: 10px
+			padding: 3px
+			gap: 10px
+
+		&_img
+			max-width: 42px
+			max-height: 42px
+			border-radius: 9px
+			overflow: hidden
+
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
+		&_name
+			font-weight: 600
+			color: $title
+			text-transform: uppercase
+
+		&_price
+			color: $text
+
 
 .footer
 	&__container
