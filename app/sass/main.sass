@@ -20,6 +20,9 @@
 		max-width: 480px
 		padding: 0 25px
 
+.main
+	margin-top: 70px
+
 .h1
 	font-weight: 700
 	color: $black
@@ -314,10 +317,12 @@
 			&--login
 				min-width: 80px
 
+//--------------Main page---------------
+
 .hero
 	padding-top: 100px
 	position: relative
-	margin-top: 95px
+	margin-top: 25px
 	background: url(../img/hero_bg.png)
 	background-repeat: no-repeat
 
@@ -647,6 +652,50 @@
 
 		&_price
 			color: $text
+
+//-------------Services-----------------
+.top
+	background: #fff
+	border-top: 1px solid #DEE1EC
+	padding: 50px 0
+
+	+r(767)
+		padding: 30px 0
+
+	&__container
+		display: flex
+		align-items: center
+		flex-direction: column
+
+	&__title
+		font-size: 70px
+		opacity: 0.5
+		text-align: center
+
+		+r(992)
+			font-size: 50px
+
+		+r(480)
+			font-size: 40px
+
+	&__breadcrumbs
+		display: flex
+		font-size: 20px
+		gap: 5px
+		font-weight: 400
+
+		+r(480)
+			font-size: 14px
+
+		a
+			color: $text
+
+			&:hover
+				text-decoration: underline
+
+
+
+
 
 
 .footer
