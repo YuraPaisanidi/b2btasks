@@ -4,11 +4,9 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Start Optimazed</title>
-	<meta name="description" content="Startup HTML Optimized">
+	<title>B2BTASKS</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.ico">
-	<meta property="og:image" content="img/preview.jpg">
 	<link rel="stylesheet" href="css/app.min.css?v=1">
 	<script src="js/app.min.js" defer></script>
 
@@ -20,14 +18,28 @@
 		<div class="header__container container">
 
 			<a href="/" class="header__logo">
-				
+				<img src="img/logo.svg" alt="">
 			</a>
 
 			<nav class="header__nav">
 				<ul>
-					<li><a href="#about">О компании</a></li>
+					<li><a href="#" class="active">Главная</a></li>
+					<li><a href="#">Услуги</a></li>
+					<li><a href="#">Биржа</a></li>
+					<li><a href="#">Специалисты</a></li>
+					<li><a href="#">Контакты</a></li>
+					<li><a href="#" class="auth">Зарегистрироваться</a></li>
+					<li><a href="#" class="auth">Войти</a></li>
 				</ul>
+
+				<div class="header__auth">
+					<a href="#" class="header__auth_btn header__auth_btn--login btn">Войти</a>
+					<a href="#" class="header__auth_btn btn">Регистрация</a>
+				</div>
 			</nav>
+
+
+
 
 			<button class="hamburger" type="button">
 				<span class="hamburger__item"></span>
@@ -38,10 +50,6 @@
 
 	<section class="section">
 		<div class="container section__container">
-
-			<a href="#" class="btn modal__edits">Добавить</a>
-			<a href="#" class="btn modal__add">Редактировать</a>
-			<a href="#" class="btn modal__thanks">Благодарность</a>
 
 		</div>
 	</section>

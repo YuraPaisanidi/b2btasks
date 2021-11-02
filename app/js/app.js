@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 	
 		};
-		// hamburger('.hamburger', '.header__nav', '.header');
+		hamburger('.hamburger', '.header__nav', '.header');
 		
 	//----------------------MODAL-----------------------
 		const modals = (modalSelector) => {
