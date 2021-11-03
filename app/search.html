@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Контакты</title>
+	<title>Услуги</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.ico">
 	<link rel="stylesheet" href="css/app.min.css?v=1">
@@ -27,7 +27,7 @@
 					<li><a href="#">Услуги</a></li>
 					<li><a href="#">Биржа</a></li>
 					<li><a href="#">Специалисты</a></li>
-					<li><a href="#" class="active">Контакты</a></li>
+					<li><a href="#">Контакты</a></li>
 					<li><a href="#" class="auth">Зарегистрироваться</a></li>
 					<li><a href="#" class="auth">Войти</a></li>
 				</ul>
@@ -49,70 +49,104 @@
 	</header>
 
 	<main class="main">
-		<section class="top">
-			<div class="top__container container">
-				<h1 class="top__title">Контакты</h1>
-				<div class="top__breadcrumbs">
-					<p>Мы всегда на связи 24/7</p>
-				</div>
-			</div>
-		</section>
 
-		<section class="contacts">
-			<div class="contacts__container container">
-				<div class="contacts__wrap">
-					<div class="contacts__info">
-						<p class="contacts__info_title">
-							Контактная информация
-						</p>
-
-						<div class="contacts__data">
-							<div class="contacts__data_item">
-								<p class="contacts__data_title">Адрес:</p>
-								<p class="contacts__data_info">Russian address</p>
-							</div>
-							<div class="contacts__data_item">
-								<p class="contacts__data_title">Телефон:</p>
-								<a href="tel:+79138545617" class="contacts__data_info">+7 (913) 854 - 56 - 17</a>
-							</div>
-							<div class="contacts__data_item">
-								<p class="contacts__data_title">E-mail</p>
-								<a href="mailto:info@gmail.com" class="contacts__data_info">info@gmail.com</a>
-							</div>
-						</div>
-
-						<form action="#" class="contacts__form form">
-							<p class="contacts__form_title">Оставайтесь на связи</p>
-							<div class="contacts__form_inputs">
-								<div class="form__item">
-									<input type="text" id="contactsName" class="contacts__form_input form__input _req" placeholder="Имя">
-								</div>
-								<div class="form__item">
-									<input type="email" id="contactsEmail" class="contacts__form_input form__input _req" placeholder="Email">
-								</div>
-								<div class="form__item">
-									<input type="text" id="contactsSubject" class="contacts__form_input form__input _req" placeholder="Тема">
-								</div>
-							</div>
-
-							<div class="form__item">
-								<textarea name="message" id="contactsMessage" cols="30" rows="10" class="contacts__form_textarea form__textarea" placeholder="Сообщение..."></textarea>
-							</div>
-							<button type="submit" class="contacts__form_btn btn" name="submit">Отправить</button>
-						</form>
-
+		<section class="search">
+			<div class="search__container container">
+				<form action="#" class="search__form">
+					<div class="form__item">
+						<input type="search" class="proposal__input form__input" placeholder="Заказать дизайн сайта">
 					</div>
-
-					<div class="contacts__map">
-						<div class="contacts__map_wrap">
-							<img src="img/map.jpg" alt="">
+					<div class="proposal__selects_item">
+						<div class="form__item">
+							<select name='category' id='category' class='form__select proposal__selects_select'>
+								<option value='IT, Интернет и связь' selected='selected' disabled hidden>Выберите категорию</option>
+								<option value='IT, Интернет и связь'>IT, Интернет и связь</option>
+								<option value='IT, Интернет и связь'>IT, Интернет и связь</option>
+								<option value='IT, Интернет и связь'>IT, Интернет и связь</option>
+							</select>
 						</div>
 					</div>
+					<button type="submit" class="search__btn btn">Найти</button>
+				</form>
+
+				<div class="search__results">
+					<a href="#" class="proposal__item">
+						<div class="proposal__item_img">
+							<img src="img/service.jpg" alt="">
+						</div>
+						<p class="proposal__item_title">When life gives you oranges</p>
+						<div class="proposal__item_info">
+							<div class="proposal__item_avatar">
+								<img src="img/item.jpg" alt="">
+							</div>
+							<p class="proposal__item_name">Webitproff</p>
+							<span></span>
+							<p class="proposal__item_price">1 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="proposal__item">
+						<div class="proposal__item_img">
+							<img src="img/service.jpg" alt="">
+						</div>
+						<p class="proposal__item_title">When life gives you oranges</p>
+						<div class="proposal__item_info">
+							<div class="proposal__item_avatar">
+								<img src="img/item.jpg" alt="">
+							</div>
+							<p class="proposal__item_name">Webitproff</p>
+							<span></span>
+							<p class="proposal__item_price">1 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="proposal__item">
+						<div class="proposal__item_img">
+							<img src="img/service.jpg" alt="">
+						</div>
+						<p class="proposal__item_title">When life gives you oranges</p>
+						<div class="proposal__item_info">
+							<div class="proposal__item_avatar">
+								<img src="img/item.jpg" alt="">
+							</div>
+							<p class="proposal__item_name">Webitproff</p>
+							<span></span>
+							<p class="proposal__item_price">1 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="proposal__item">
+						<div class="proposal__item_img">
+							<img src="img/service.jpg" alt="">
+						</div>
+						<p class="proposal__item_title">When life gives you oranges</p>
+						<div class="proposal__item_info">
+							<div class="proposal__item_avatar">
+								<img src="img/item.jpg" alt="">
+							</div>
+							<p class="proposal__item_name">Webitproff</p>
+							<span></span>
+							<p class="proposal__item_price">1 000 ₽</p>
+						</div>
+					</a>
+					<a href="#" class="proposal__item">
+						<div class="proposal__item_img">
+							<img src="img/service.jpg" alt="">
+						</div>
+						<p class="proposal__item_title">When life gives you oranges</p>
+						<div class="proposal__item_info">
+							<div class="proposal__item_avatar">
+								<img src="img/item.jpg" alt="">
+							</div>
+							<p class="proposal__item_name">Webitproff</p>
+							<span></span>
+							<p class="proposal__item_price">1 000 ₽</p>
+						</div>
+					</a>
 				</div>
 			</div>
+
+
 		</section>
+
 	</main>
-
 
 	<footer class="footer">
 		<div class="footer__container container">
