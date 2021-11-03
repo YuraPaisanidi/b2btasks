@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Услуги</title>
+	<title>Контакты</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.ico">
 	<link rel="stylesheet" href="css/app.min.css?v=1">
@@ -49,139 +49,69 @@
 	</header>
 
 	<main class="main">
-
 		<section class="top">
 			<div class="top__container container">
-				<h1 class="top__title">Предложения специалистов</h1>
+				<h1 class="top__title">Контакты</h1>
 				<div class="top__breadcrumbs">
-					<a href="#">Главная</a>
-					<span>/</span>
-					<p>Маркет</p>
+					<p>Мы всегда на связи 24/7</p>
 				</div>
 			</div>
 		</section>
 
-		<section class="proposal">
-			<div class="proposal__container container">
-				<div class="proposal__wrap">
-					<form action="#" class="proposal__search">
-						<input type="search" class="proposal__input" placeholder="Заказать дизайн сайта">
-						<div class="proposal__selects">
-							<div class="proposal__selects_item">
-								<p class="proposal__selects_title">Категория</p>
-								<select name='category' id='category' class='form__select'>
-									<option value='IT, Интернет и связь' selected='selected'>IT, Интернет и связь</option>
-									<option value='IT, Интернет и связь'>IT, Интернет и связь</option>
-									<option value='IT, Интернет и связь'>IT, Интернет и связь</option>
-									<option value='IT, Интернет и связь'>IT, Интернет и связь</option>
-								</select>
+		<section class="contacts">
+			<div class="contacts__container container">
+				<div class="contacts__wrap">
+					<div class="contacts__info">
+						<p class="contacts__info_title">
+							Контактная информация
+						</p>
+
+						<div class="contacts__data">
+							<div class="contacts__data_item">
+								<p class="contacts__data_title">Адрес:</p>
+								<p class="contacts__data_info">Russian address</p>
 							</div>
-							<div class="proposal__selects_item">
-								<p class="proposal__selects_title">Порядок</p>
-								<select name='sort' id='sort' class='form__select'>
-									<option value='По убыванию' selected='selected'>По убыванию</option>
-									<option value='По убыванию'>По убыванию</option>
-									<option value='По убыванию'>По убыванию</option>
-									<option value='По убыванию'>По убыванию</option>
-								</select>
+							<div class="contacts__data_item">
+								<p class="contacts__data_title">Телефон:</p>
+								<a href="tel:+79138545617" class="contacts__data_info">+7 (913) 854 - 56 - 17</a>
+							</div>
+							<div class="contacts__data_item">
+								<p class="contacts__data_title">E-mail</p>
+								<a href="mailto:info@gmail.com" class="contacts__data_info">info@gmail.com</a>
 							</div>
 						</div>
-						<button type="submit" class="proposal__btn btn">Поиск</button>
-					</form>
 
-					<div class="proposal__content">
-						<a href="#" class="proposal__item">
-							<div class="proposal__item_img">
-								<img src="img/service.jpg" alt="">
-							</div>
-							<p class="proposal__item_title">When life gives you oranges</p>
-							<div class="proposal__item_info">
-								<div class="proposal__item_avatar">
-									<img src="img/item.jpg" alt="">
+						<form action="#" class="contacts__form form">
+							<p class="contacts__form_title">Оставайтесь на связи</p>
+							<div class="contacts__form_inputs">
+								<div class="form__item">
+									<input type="text" id="contactsName" class="contacts__form_input form__input _req" placeholder="Имя">
 								</div>
-								<p class="proposal__item_name">Webitproff</p>
-								<span></span>
-								<p class="proposal__item_price">1 000 ₽</p>
-							</div>
-						</a>
-						<a href="#" class="proposal__item">
-							<div class="proposal__item_img">
-								<img src="img/service.jpg" alt="">
-							</div>
-							<p class="proposal__item_title">When life gives you oranges</p>
-							<div class="proposal__item_info">
-								<div class="proposal__item_avatar">
-									<img src="img/item.jpg" alt="">
+								<div class="form__item">
+									<input type="email" id="contactsEmail" class="contacts__form_input form__input _req" placeholder="Email">
 								</div>
-								<p class="proposal__item_name">Webitproff</p>
-								<span></span>
-								<p class="proposal__item_price">1 000 ₽</p>
-							</div>
-						</a>
-						<a href="#" class="proposal__item">
-							<div class="proposal__item_img">
-								<img src="img/service.jpg" alt="">
-							</div>
-							<p class="proposal__item_title">When life gives you oranges</p>
-							<div class="proposal__item_info">
-								<div class="proposal__item_avatar">
-									<img src="img/item.jpg" alt="">
+								<div class="form__item">
+									<input type="text" id="contactsSubject" class="contacts__form_input form__input _req" placeholder="Тема">
 								</div>
-								<p class="proposal__item_name">Webitproff</p>
-								<span></span>
-								<p class="proposal__item_price">1 000 ₽</p>
 							</div>
-						</a>
-						<a href="#" class="proposal__item">
-							<div class="proposal__item_img">
-								<img src="img/service.jpg" alt="">
+
+							<div class="form__item">
+								<textarea name="message" id="contactsMessage" cols="30" rows="10" class="contacts__form_textarea form__textarea" placeholder="Сообщение..."></textarea>
 							</div>
-							<p class="proposal__item_title">When life gives you oranges</p>
-							<div class="proposal__item_info">
-								<div class="proposal__item_avatar">
-									<img src="img/item.jpg" alt="">
-								</div>
-								<p class="proposal__item_name">Webitproff</p>
-								<span></span>
-								<p class="proposal__item_price">1 000 ₽</p>
-							</div>
-						</a>
-						<a href="#" class="proposal__item">
-							<div class="proposal__item_img">
-								<img src="img/service.jpg" alt="">
-							</div>
-							<p class="proposal__item_title">When life gives you oranges</p>
-							<div class="proposal__item_info">
-								<div class="proposal__item_avatar">
-									<img src="img/item.jpg" alt="">
-								</div>
-								<p class="proposal__item_name">Webitproff</p>
-								<span></span>
-								<p class="proposal__item_price">1 000 ₽</p>
-							</div>
-						</a>
-						<a href="#" class="proposal__item">
-							<div class="proposal__item_img">
-								<img src="img/service.jpg" alt="">
-							</div>
-							<p class="proposal__item_title">When life gives you oranges</p>
-							<div class="proposal__item_info">
-								<div class="proposal__item_avatar">
-									<img src="img/item.jpg" alt="">
-								</div>
-								<p class="proposal__item_name">Webitproff</p>
-								<span></span>
-								<p class="proposal__item_price">1 000 ₽</p>
-							</div>
-						</a>
+							<button type="submit" class="contacts__form_btn btn" name="submit">Отправить</button>
+						</form>
+
 					</div>
 
+					<div class="contacts__map">
+						<div class="contacts__map_wrap">
+							<img src="img/map.jpg" alt="">
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
-	
 	</main>
-
 
 
 	<footer class="footer">
