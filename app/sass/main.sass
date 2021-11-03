@@ -1070,8 +1070,6 @@
 	+r(992)
 		padding: 30px 0
 
-	
-
 	&__container
 		display: flex
 		flex-direction: column
@@ -1099,6 +1097,7 @@
 
 			+r(480)
 				margin-bottom: 20px
+				font-size: 17px
 
 		.form__item
 			margin-bottom: 25px
@@ -1129,6 +1128,21 @@
 			background-repeat: no-repeat
 			background-position: 20px 50%
 
+		&--email
+			background: url(../img/email.svg)
+			background-repeat: no-repeat
+			background-position: 20px 50%
+
+	&__checkbox
+		margin-right: 15px
+		height: 16px
+		width: 16px
+
+		&_label
+			color: $title
+			font-size: 14px
+			font-weight: 400
+
 	&__forgot
 		font-size: 14px
 		color: $title
@@ -1146,6 +1160,24 @@
 		+r(480)
 			height: 55px
 			margin-top: 15px
+
+//----------------Registration
+.registr
+	@extend .auth
+	padding-top: 60px
+	padding-bottom: 200px
+
+	+r(1200)
+		padding: 50px 0
+
+	+r(992)
+		padding: 30px 0
+
+	&__container
+		@extend .auth__container
+
+	&__form
+		@extend .auth__form
 
 .footer
 	padding-top: 250px
@@ -1382,6 +1414,7 @@
 
 	&__item
 		position: relative
+		display: flex
 		// margin-bottom: 15px
 
 	&__label
