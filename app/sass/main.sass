@@ -317,6 +317,32 @@
 			&--login
 				min-width: 80px
 
+	&__profile
+		display: flex
+		align-items: center
+		gap: 10px
+		
+		&_pay
+			display: flex
+			gap: 5px
+
+		&_balance
+			font-weight: 700
+			color: $title
+
+		&_avatar
+			width: 50px
+			height: 50px
+			border-radius: 10px
+			overflow: hidden
+			border: 1px solid $text
+			position: relative
+
+			img
+				object-fit: cover
+				width: 100%
+				height: 100%
+
 //--------------Main page---------------
 
 .hero
@@ -464,7 +490,7 @@
 		border-radius: 5px
 		padding: 0 50px 15px 50px
 
-		+r(480)
+		+r(1440)
 			padding-left: 30px
 			padding-right: 30px
 
@@ -1188,6 +1214,30 @@
 
 	&__form
 		@extend .auth__form
+
+//--------------------Specialists-------------
+.specialists
+	padding-top: 120px
+	padding-bottom: 60px
+
+	&__wrap
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr
+		gap: 40px
+
+		+r(1440)
+			gap: 20px
+
+		+r(1200)
+			grid-template-columns: 1fr 1fr 1fr
+			row-gap: 45px
+
+		+r(767)
+			grid-template-columns: 1fr 1fr
+
+		+r(480)
+			grid-template-columns: 1fr
+			padding: 0 25px
 
 .footer
 	padding-top: 250px
