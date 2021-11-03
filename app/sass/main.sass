@@ -803,7 +803,7 @@
 
 		+r(576)
 			grid-template-columns: 1fr
-			padding: 0 40px
+			padding: 0 25px
 
 	&__item
 		background: #fff
@@ -949,15 +949,19 @@
 			@extend .contacts__info_title
 
 		&_inputs
-			display: flex
+			display: grid
+			grid-template-columns: 1fr 1fr 1fr
 			gap: 20px
 
 			+r(992)
-				flex-direction: column
+				grid-template-columns: 1fr
 
 		&_input
 			color: $text
 			border-radius: 10px
+			border: none
+			height: 50px
+			line-height: 50px
 
 
 		&_btn
@@ -993,6 +997,18 @@
 				width: 100%
 				height: 100%
 
+//-------------Burse---------------------
+.burse
+	@extend .proposal
+
+	&__wrap
+		@extend .proposal__wrap
+
+	&__search
+		@extend .proposal__search
+
+	&__content
+		@extend .proposal__content
 
 
 .footer
@@ -1239,11 +1255,10 @@
 
 	&__input
 		width: 100%
-		height: 50px
+		min-height: 45px
 		line-height: 50px
 		padding: 0 25px
 		font-size: 17px
-		border: none
 
 		+r(992)
 			border: 1px solid rgba(187, 193, 217, 0.5)
