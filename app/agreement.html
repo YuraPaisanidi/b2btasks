@@ -4,7 +4,7 @@
 <head>
 
 	<meta charset="utf-8">
-	<title>Авторизация</title>
+	<title>Соглашение</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="icon" href="img/favicon.ico">
 	<link rel="stylesheet" href="css/app.min.css?v=1">
@@ -28,13 +28,17 @@
 					<li><a href="#">Биржа</a></li>
 					<li><a href="#">Специалисты</a></li>
 					<li><a href="#">Контакты</a></li>
-					<li><a href="#" class="authorization">Зарегистрироваться</a></li>
-					<li><a href="#" class="authorization">Войти</a></li>
 				</ul>
 
-				<div class="header__auth">
-					<a href="#" class="header__auth_btn header__auth_btn--login btn">Войти</a>
-					<a href="#" class="header__auth_btn btn">Регистрация</a>
+				<div class="header__profile">
+					<a href="#" class="header__profile_pay btn">
+						<img src="img/wallet.svg" alt="">
+						<span>Пополнить</span>
+					</a>
+					<span class="header__profile_balance">0 ₽ </span>
+					<a href="#" class="header__profile_avatar">
+						<img src="img/item.jpg" alt="">
+					</a>
 				</div>
 			</nav>
 
@@ -50,21 +54,31 @@
 
 	<main class="main">
 
-		<section class="auth">
-			<div class="auth__container container">
-				<form action="#" class="auth__form form">
-					<h1 class="auth__form_title">
-						Авторизация на сайте
-					</h1>
-					<div class="form__item">
-						<input type="text" name="login" id="authLogin" class="form__input auth__input auth__input--login _req" placeholder="Введите логин">
-					</div>
-					<div class="form__item">
-						<input type="password" name="password" id="authPassword" class="form__input auth__input auth__input--pass _req" placeholder="Введите пароль">
-					</div>
-					<a href="#" class="auth__forgot">Забыли пароль?</a>
-					<button type="submit" class="auth__btn btn">Войти</button>
-				</form>
+		<section class="agreement">
+			<div class="agreement__container container">
+				<div class="agreement__wrap">
+					<h1 class="agreement__title">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</h1>
+					<p class="agreement__text">
+						Публичная оферта на сайте.<br> 
+						Публичная оферта (далее – «Оферта») - публичное предложение Продавца, адресованное 
+						неопределенному кругу лиц, заключить с Продавцом договор купли-продажи товара 
+						дистанционным способом (далее - «Договор») на условиях, содержащихся в настоящей 
+						Оферте, включая все Приложения.
+					</p>
+					<p class="agreement__text">
+						Публичная оферта (далее – «Оферта») - публичное предложение Продавца, адресованное 
+						неопределенному кругу лиц, заключить с Продавцом договор купли-продажи товара 
+						дистанционным способом (далее - «Договор») на условиях, содержащихся в настоящей 
+						Оферте, включая все Приложения.
+					</p>
+					<p class="agreement__text">
+						Публичная оферта (далее – «Оферта») - публичное предложение Продавца, адресованное 
+						неопределенному кругу лиц, заключить с Продавцом договор купли-продажи товара 
+						дистанционным способом (далее - «Договор») на условиях, содержащихся в настоящей 
+						Оферте, включая все Приложения.
+					</p>
+					<a href="#" class="agreement__btn btn">На главную</a>
+				</div>
 			</div>
 		</section>
 
@@ -379,6 +393,8 @@
 			<p>Мы обязательно с вами свяжемся!</p>
 		</div>
 	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/imask/3.4.0/imask.min.js"></script>
 
 </body>
 
