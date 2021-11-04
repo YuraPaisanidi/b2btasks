@@ -1745,6 +1745,84 @@
 		+r(1200)
 			display: none
 
+//------------------------Order--------------------
+.order
+	padding-top: 75px
+	padding-bottom: 75px
+
+	+r(992)
+		padding-top: 30px
+
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__form
+		background: #fff
+		border-radius: 15px
+		padding: 40px 90px
+		display: flex
+		flex-direction: column
+		align-items: center
+		gap: 20px
+		max-width: 695px
+		width: 100%
+
+		+r(767)
+			padding: 30px
+
+		.form__item
+			display: flex
+			flex-direction: column
+			width: 100%
+
+	&__title
+		@extend .profile__info_title
+
+		+r(576)
+			margin-bottom: 0
+
+		&::before,
+		&::after
+			
+			+r(576)
+				display: none
+
+	&__label
+		@extend .proposal__selects_title
+
+	&__input
+		height: 65px
+		line-height: 65px
+		border: 1px solid rgba(78, 82, 108, 0.1)
+		border-radius: 10px
+		font-size: 17px
+		font-weight: 300
+
+		+r(576)
+			height: 55px
+			line-height: 55px
+
+	&__textarea
+		border: 1px solid rgba(78, 82, 108, 0.1)
+		color: $text
+		font-weight: 300
+		height: 145px
+
+
+	&__btn
+		max-width: 100%
+		width: 100%
+		height: 70px
+		font-size: 20px
+		border-radius: 10px
+		
+		+r(576)
+			height: 50px
+			font-size: 17px
+
+
 .footer
 	padding-top: 250px
 	padding-bottom: 50px
@@ -2015,7 +2093,7 @@
 		min-height: 120px
 		padding: 15px
 		font-size: 17px
-		border: none
+		// border: none
 		border-radius: 10px
 		height: 140px
 
