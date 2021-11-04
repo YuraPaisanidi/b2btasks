@@ -1822,6 +1822,67 @@
 			height: 50px
 			font-size: 17px
 
+//-------------------------Publishing--------------
+.publishing
+	padding-top: 60px
+	padding-bottom: 60px
+
+	+r(767)
+		padding-top: 30px
+
+	&__container
+		display: flex
+		flex-direction: column
+		align-items: center
+
+	&__form
+		background: #fff
+		border-radius: 10px
+		padding: 45px
+		max-width: 1080px
+		width: 100%
+		display: flex
+		flex-direction: column
+		gap: 20px
+
+		+r(576)
+			padding: 20px 15px
+
+		.form__item
+			display: flex
+			flex-direction: column
+
+	&__desc
+		@extend .profile__info_title
+		margin-bottom: 10px
+
+	&__label
+		@extend .proposal__selects_title
+
+		+r(576)
+			margin-bottom: 5px
+
+	&__select
+		border: 1px solid rgba(187, 193, 217, 0.5)
+		color: $text
+
+	&__input
+		border: 1px solid rgba(187, 193, 217, 0.5)
+		border-radius: 10px
+
+	&__textarea
+		border: 1px solid rgba(187, 193, 217, 0.5)
+		font-size: 12px
+
+	&__btn
+		height: 45px
+		min-width: 250px
+		font-size: 16px
+		
+		+r(576)
+			max-width: 100%
+			width: 100%
+
 
 .footer
 	padding-top: 250px
@@ -2091,8 +2152,8 @@
 		width: 100%
 		resize: none
 		min-height: 120px
-		padding: 15px
-		font-size: 17px
+		padding: 20px
+		// font-size: 17px
 		// border: none
 		border-radius: 10px
 		height: 140px
@@ -2150,7 +2211,7 @@
 
 		&_item
 			position: relative
-			margin-bottom: 10px
+			// margin-bottom: 10px
 
 		&_input
 			position: absolute
@@ -2160,17 +2221,19 @@
 			height: 100%
 			opacity: 0
 			font-size: 0
+			height: 45px
 
 		&_button
 			display: inline-flex
-			min-height: 40px
-			border-radius: 30px
+			height: 45px
+			border-radius: 10px
 			justify-content: center
 			align-items: center
-			background-color: $dark
+			background-color: #4E526C
 			color: #fff
 			padding: 0 15px
 			cursor: pointer
+			min-width: 220px
 
 		&_preview
 			display: inline-block
