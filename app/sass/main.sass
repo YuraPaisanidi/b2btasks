@@ -1721,6 +1721,29 @@
 			max-width: 100%
 			width: 100%
 
+//-----------------------Oferta---------------------
+.oferta
+	@extend .agreement
+
+	&::before
+		content: url(../img/web_1.png)
+		position: absolute
+		top: 0
+		left: 0
+		z-index: -1
+
+		+r(1200)
+			display: none
+
+	&::after
+		content: url(../img/web_2.png)
+		position: absolute
+		bottom: -50%
+		right: 0
+		z-index: -1
+
+		+r(1200)
+			display: none
 
 .footer
 	padding-top: 250px
