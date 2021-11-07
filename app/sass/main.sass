@@ -1890,6 +1890,9 @@
 	padding-top: 80px
 	padding-bottom: 80px
 
+	+r(992)
+		padding-top: 30px
+
 	&__container
 		display: flex
 		align-items: center
@@ -2008,6 +2011,117 @@
 		color: #fff
 
 	input[type="radio"] + label
+
+//------------------------Paid order-----------------
+.paid-order
+	padding: 75px 0
+
+	+r(992)
+		padding-top: 30px
+
+	&__container
+		display: flex
+		align-items: center
+		flex-direction: column
+
+	&__form
+		border-radius: 15px
+		background: #fff
+		max-width: 595px
+		width: 100%
+		padding: 35px
+		display: flex
+		align-items: center
+		flex-direction: column
+		gap: 35px
+
+		+r(576)
+			gap: 0
+			padding: 15px
+
+	&__title
+		@extend .profile__info_title
+		text-transform: uppercase
+
+	&__wrap
+		max-width: 385px
+		width: 100%
+
+		+r(576)
+			margin-bottom: 20px
+
+	&__item
+		display: flex
+		justify-content: space-between
+		align-items: center
+		width: 100%
+		padding: 15px 0
+		border-bottom: 1px solid rgba(187, 193, 217, 0.1)
+
+	&__label
+		@extend .proposal__selects_title
+		margin-bottom: 0
+
+	&__value
+		font-size: 14px
+		color: $title
+
+		+r(576)
+			font-size: 12px
+
+		&--customer,
+		&--customer2,
+		&--guarantee
+			font-size: 12px
+			background: $accent
+			color: #fff
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 5px
+			height: 30px
+			padding: 8px 10px
+
+		&--customer2
+			background: #28A745
+
+		&--guarantee
+			background: #F0506E
+
+	&__notice
+		background: #f0505e
+		opacity: 0.5
+		height: 60px
+		max-width: 100%
+		width: 100%
+		font-size: 14px
+		border: none
+		margin-top: 20px
+
+		+r(576)
+			height: 50px
+
+		&:hover
+			border-color: transparent
+
+	&__download
+		height: 70px
+		font-size: 20px
+		max-width: 100%
+		width: 100%
+		background: #6080FF
+
+		+r(576)
+			font-size: 17px
+			max-width: 275px
+			height: 50px
+
+		&:disabled
+			opacity: 0.5
+
+			&:hover
+				border-color: transparent
+
 
 
 .footer
