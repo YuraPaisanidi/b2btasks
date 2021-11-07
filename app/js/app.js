@@ -3,29 +3,14 @@
 document.addEventListener("DOMContentLoaded", function() {
 
 	// ----------------------SLIDER-hero----------------------
-	// 	var mySwiper = new Swiper('.hero__slider', {
-	// 		slidesPerView: 1,
-	// 		spaceBetween: 30,
-	// 		loop: true,
-	// 		effect: 'fade',
-	// 		autoplay: {
-	// 			delay: 5000,
-	// 		},
-	// 		pagination: {
-	// 			el: '.hero__pagination',
-	// 			clickable: 'true',
-	// 		},
-	// 		navigation: {
-	// 			nextEl: '.hero__next',
-	// 			prevEl: '.hero__prev',
-	// 		},
-	// 		breakpoints: {
-	// 			320: {
-	// 				slidesPerView: 2,
-	// 				spaceBetween: 20
-	// 			},
-	// 		}
-	// 	});
+		var mySwiper = new Swiper('.product__slider', {
+			// slidesPerView: 1,
+			// spaceBetween: 30,
+			navigation: {
+				nextEl: ".swiper-button-next",
+				prevEl: ".swiper-button-prev",
+			},
+		});
 
 	//----------------------SCROLL-----------------------
 		const scrollTo = (scrollTo) => {
@@ -408,3 +393,4 @@ const getFinalLink = () => {
 }
 
 document.querySelector('#refillNextStep').addEventListener('click', nextStep);
+
