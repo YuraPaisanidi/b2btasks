@@ -395,3 +395,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 
 	});
+
+//------------------Refill page steps---------------
+const nextStep = () => {
+	document.querySelector('.refill__step--1').classList.remove('active');
+	document.querySelector('.refill__step--2').classList.add('active');
+}
+
+const getFinalLink = () => {
+	let link = document.querySelector('input[type=radio]:checked').value;
+	document.querySelector('#finalLink').href = link;
+}
+
+document.querySelector('#refillNextStep').addEventListener('click', nextStep);
