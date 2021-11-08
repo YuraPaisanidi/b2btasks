@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			// slidesPerView: 1,
 			// spaceBetween: 30,
 			navigation: {
-				nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
+				nextEl: ".product__navigation_next",
+				prevEl: ".product__navigation_prev",
 			},
 		});
 
@@ -148,26 +148,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
 				let formData = new FormData(item);
 
-				if (error === 0) {
-					item.classList.add('_sending');
-					let response = await fetch('sendmail.php', {
-						method: 'POST',
-						body: formData
-					});
+				// if (error === 0) {
+				// 	item.classList.add('_sending');
+				// 	let response = await fetch('sendmail.php', {
+				// 		method: 'POST',
+				// 		body: formData
+				// 	});
 
-					if (response.ok) {
-						let modalThanks = document.querySelector('#modal__thanks');
-						formParent.parentNode.style.display = 'none';
+				// 	if (response.ok) {
+				// 		let modalThanks = document.querySelector('#modal__thanks');
+				// 		formParent.parentNode.style.display = 'none';
 
-						modalThanks.classList.add('active');
-						item.reset();
-						item.classList.remove('_sending');
-					} else {
-						alert('Ошибка при отправке');
-						item.classList.remove('_sending');
-					}
+				// 		modalThanks.classList.add('active');
+				// 		item.reset();
+				// 		item.classList.remove('_sending');
+				// 	} else {
+				// 		alert('Ошибка при отправке');
+				// 		item.classList.remove('_sending');
+				// 	}
 
-				}
+				// }
 			}
 
 			function formValidate(item) {
@@ -198,58 +198,58 @@ document.addEventListener("DOMContentLoaded", function() {
 
 			const formImgFile = formParent.querySelectorAll('.formImgFile');
 
-			formImgFile.forEach(item => { 
-				const elem = 'formImgFile--' + i++;
+			// formImgFile.forEach(item => { 
+			// 	const elem = 'formImgFile--' + i++;
 
-				let formId = item.id = (elem);
-				let formParent = document.querySelector('#' + formId);
+			// 	let formId = item.id = (elem);
+			// 	let formParent = document.querySelector('#' + formId);
 
-				const formImage = formParent.querySelector('.formImage');
-				const formLebel = formParent.querySelector('.formLebel');
-				const formPreview = formParent.querySelector('.formPreview');
+			// 	const formImage = formParent.querySelector('.formImage');
+			// 	const formLebel = formParent.querySelector('.formLebel');
+			// 	const formPreview = formParent.querySelector('.formPreview');
 
-				//картинка в форме
-				let formImageNumber = 'formImage--' + img++;
-				let formPreviewNumber = 'formPreview--' + prev++;
+			// 	//картинка в форме
+			// 	let formImageNumber = 'formImage--' + img++;
+			// 	let formPreviewNumber = 'formPreview--' + prev++;
 				
-				formImage.id = (formImageNumber);
-				formLebel.htmlFor = ('formImage--' + lebel++);
-				formPreview.id = (formPreviewNumber);
-				const formImageAdd = document.querySelector('#' + formImageNumber);
+			// 	formImage.id = (formImageNumber);
+			// 	formLebel.htmlFor = ('formImage--' + lebel++);
+			// 	formPreview.id = (formPreviewNumber);
+			// 	const formImageAdd = document.querySelector('#' + formImageNumber);
 
-				// изменения в инпуте файл
-				formImageAdd.addEventListener('change', () =>  {
-					uploadFile(formImage.files[0]);
-				});
+			// 	// изменения в инпуте файл
+			// 	formImageAdd.addEventListener('change', () =>  {
+			// 		uploadFile(formImage.files[0]);
+			// 	});
 
-				function uploadFile(file) {
+			// 	function uploadFile(file) {
 			
-					if (!['image/jpeg', 'image/png', 'image/gif', 'image/ico', 'application/pdf'].includes(file.type)) {
-						alert('Только изображения');
-						formImage.value = '';
-						return;
-					}
+			// 		if (!['image/jpeg', 'image/png', 'image/gif', 'image/ico', 'application/pdf'].includes(file.type)) {
+			// 			alert('Только изображения');
+			// 			formImage.value = '';
+			// 			return;
+			// 		}
 			
-					if (file.size > 2 * 1024 * 1024) {
-						alert('Размер менее 2 мб.');
-						return;
-					}
+			// 		if (file.size > 2 * 1024 * 1024) {
+			// 			alert('Размер менее 2 мб.');
+			// 			return;
+			// 		}
 			
-					var reader = new FileReader();
-					reader.onload = function (e) {
-						if(['application/pdf'].includes(file.type)) {
-							formPreview.innerHTML = `Файл выбран`;
-						}else{
-							formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
-						}
+			// 		var reader = new FileReader();
+			// 		reader.onload = function (e) {
+			// 			if(['application/pdf'].includes(file.type)) {
+			// 				formPreview.innerHTML = `Файл выбран`;
+			// 			}else{
+			// 				formPreview.innerHTML = `<img src="${e.target.result}" alt="Фото">`;
+			// 			}
 						
-					};
-					reader.onerror = function (e) {
-						alert('Ошибка');
-					};
-					reader.readAsDataURL(file);
-				}
-			})
+			// 		};
+			// 		reader.onerror = function (e) {
+			// 			alert('Ошибка');
+			// 		};
+			// 		reader.readAsDataURL(file);
+			// 	}
+			// })
 
 			function formAddError(input) {
 				let div = document.createElement('div');
@@ -289,108 +289,47 @@ document.addEventListener("DOMContentLoaded", function() {
 		};
 		forms('.form');
 
+//----------------------TABS-JS----------------------
+const tabs = (headerSelector, tabSelector, contentSelector, activeClass) => {
+	const header = document.querySelector(headerSelector),
+				tab = document.querySelectorAll(tabSelector),
+				content = document.querySelectorAll(contentSelector);
 
-//---------------Credit card mask-------------
+	function hideTabContent() {
+		content.forEach(item => {
+			item.style.display = "none";
+		});
 
-		window.onload = function () {
-			const cardnumber = document.getElementById('cardNumber');
-		
-			let cctype = null;
-		
-			//Mask the Credit Card Number Input
-			var cardnumber_mask = new IMask(cardnumber, {
-				mask: [{
-						mask: '0000 000000 00000',
-						regex: '^3[47]\\d{0,13}',
-						cardtype: 'american express'
-					},
-					{
-						mask: '0000 0000 0000 0000',
-						regex: '^(?:6011|65\\d{0,2}|64[4-9]\\d?)\\d{0,12}',
-						cardtype: 'discover'
-					},
-					{
-						mask: '0000 000000 0000',
-						regex: '^3(?:0([0-5]|9)|[689]\\d?)\\d{0,11}',
-						cardtype: 'diners'
-					},
-					{
-						mask: '0000 0000 0000 0000',
-						regex: '^(5[1-5]\\d{0,2}|22[2-9]\\d{0,1}|2[3-7]\\d{0,2})\\d{0,12}',
-						cardtype: 'mastercard'
-					},
-					// {
-					//     mask: '0000-0000-0000-0000',
-					//     regex: '^(5019|4175|4571)\\d{0,12}',
-					//     cardtype: 'dankort'
-					// },
-					// {
-					//     mask: '0000-0000-0000-0000',
-					//     regex: '^63[7-9]\\d{0,13}',
-					//     cardtype: 'instapayment'
-					// },
-					{
-						mask: '0000 000000 00000',
-						regex: '^(?:2131|1800)\\d{0,11}',
-						cardtype: 'jcb15'
-					},
-					{
-						mask: '0000 0000 0000 0000',
-						regex: '^(?:35\\d{0,2})\\d{0,12}',
-						cardtype: 'jcb'
-					},
-					{
-						mask: '0000 0000 0000 0000',
-						regex: '^(?:5[0678]\\d{0,2}|6304|67\\d{0,2})\\d{0,12}',
-						cardtype: 'maestro'
-					},
-					// {
-					//     mask: '0000-0000-0000-0000',
-					//     regex: '^220[0-4]\\d{0,12}',
-					//     cardtype: 'mir'
-					// },
-					{
-						mask: '0000 0000 0000 0000',
-						regex: '^4\\d{0,15}',
-						cardtype: 'visa'
-					},
-					{
-						mask: '0000 0000 0000 0000',
-						regex: '^62\\d{0,14}',
-						cardtype: 'unionpay'
-					},
-					{
-						mask: '0000 0000 0000 0000',
-						cardtype: 'Unknown'
-					}
-				],
-				dispatch: function (appended, dynamicMasked) {
-					var number = (dynamicMasked.value + appended).replace(/\D/g, '');
-		
-					for (var i = 0; i < dynamicMasked.compiledMasks.length; i++) {
-						let re = new RegExp(dynamicMasked.compiledMasks[i].regex);
-						if (number.match(re) != null) {
-							return dynamicMasked.compiledMasks[i];
-						}
-					}
+		tab.forEach(item => {
+			item.classList.remove(activeClass);
+		});
+	}
+
+	function showTabContent(i = 0) {
+		content[i].style.display = "block";
+		tab[i].classList.add(activeClass);
+	}
+
+	hideTabContent();
+	showTabContent();
+
+	header.addEventListener('click', (e) => {
+		const target = e.target;
+		if (target && 
+			(target.classList.contains(tabSelector.replace(/\./, '')) || 
+			target.parentNode.classList.contains(tabSelector.replace(/\./, '')))) {
+			tab.forEach((item, i) => {
+				if (target == item || target.parentNode == item) {
+					hideTabContent();
+					showTabContent(i);
 				}
 			});
-		
-		
-		};
+		}
+	});
+};
+tabs('.product__tabs', '.product__tabs_item', '.product__tabs_wrap', 'active');
+
 
 	});
 
-//------------------Refill page steps---------------
-const nextStep = () => {
-	document.querySelector('.refill__step--1').classList.remove('active');
-	document.querySelector('.refill__step--2').classList.add('active');
-}
-
-const getFinalLink = () => {
-	let link = document.querySelector('input[type=radio]:checked').value;
-	document.querySelector('#finalLink').href = link;
-}
-
-document.querySelector('#refillNextStep').addEventListener('click', nextStep);
 
