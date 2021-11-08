@@ -239,12 +239,13 @@
 			right: -100%
 			top: 0
 			height: 100vh
-			width: 80%
+			width: 100%
 			overflow: auto
 			background-color: #fff
 			padding: 60px 40px 90px
 			box-shadow: 0 5px 5px 0 rgba(#000, .25)
 			flex-direction: column
+			opacity: 0.9
 
 		+r(480)
 			padding-left: 20px
@@ -367,6 +368,7 @@
 	&__container
 		display: flex
 		justify-content: space-between
+		align-items: center
 		gap: 20px
 
 		+r(1200)
@@ -455,6 +457,9 @@
 	&__img
 		width: 100%
 		height: auto
+
+		+r(1200)
+			width: 70%
 
 		img
 			object-fit: contain
@@ -774,7 +779,7 @@
 		position: relative
 		background-image: url(../img/search.svg)
 		background-repeat: no-repeat
-		background-position: 99% 50%
+		background-position: 96% 50%
 
 	&__selects
 		display: flex
@@ -804,7 +809,6 @@
 		&_item
 			width: 100%
 
-
 		&_select
 			height: 45px
 			border: 1px solid rgba(187, 193, 217, 0.5)
@@ -812,6 +816,12 @@
 			font-size: 13px
 			padding-left: 20px
 			color: $text
+			appearance: none
+			background-image: url(../img/select-arrow.svg)
+			background-repeat: no-repeat
+			background-position: 90% 50%
+
+
 
 	&__btn
 		width: 100%
@@ -1032,8 +1042,7 @@
 			+r(480)
 				height: 300px
 
-			img
-				object-fit: cover
+			iframe
 				width: 100%
 				height: 100%
 
@@ -1925,15 +1934,16 @@
 		gap: 25px
 		background: #fff
 		width: 100%
+		max-width: 515px
 
 		+r(576)
 			gap: 20px
 
-		&--1
-			max-width: 420px
+		// &--1
+		// 	max-width: 420px
 
-		&--2
-			max-width: 515px
+		// &--2
+		// 	max-width: 515px
 
 			.refill__label
 				margin-bottom: 0
@@ -2387,8 +2397,14 @@
 		justify-content: space-between
 		width: 100%
 
+		+r(992)
+			top: 50%
+			left: 0
+			bottom: 0
+			margin-top: -30px
+
 		+r(576)
-			padding: 0 15px
+			padding: 0 5px
 
 		&_prev,
 		&_next

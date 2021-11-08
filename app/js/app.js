@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// ----------------------SLIDER-hero----------------------
 		var mySwiper = new Swiper('.product__slider', {
 			// slidesPerView: 1,
-			// spaceBetween: 30,
+			spaceBetween: 1,
 			navigation: {
 				nextEl: ".product__navigation_next",
 				prevEl: ".product__navigation_prev",
